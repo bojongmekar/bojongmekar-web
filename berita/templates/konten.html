@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+ 
+{% block content %}
+<head>
+    <title>Berita</title>
+    <style>
+        img {
+            height: 10px;
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg p-3 shadow fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Bojongmekar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item font-bold">
+                        <a class="nav-link mx-2" aria-current="page" href="/">Beranda</a>
+                    </li>
+                    <li class="nav-item dropdown font-bold">
+                        <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profil Desa</a>
+                        <ul class="dropdown-menu font-bold" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="/profil/sejarah/">Tentang Desa</a></li>
+                            <li><a class="dropdown-item" href="/profil/wilayah/">Wilayah Desa</a></li>
+                            <li><a class="dropdown-item" href="/profil/masyarakat/">Masyarakat Desa</a></li>
+                            <li><a class="dropdown-item" href="/profil/potensi/">Potensi Desa</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item font-bold">
+                        <a class="nav-link mx-2 active" href="/berita/">Berita</a>
+                    </li>
+                    <li class="nav-item font-bold">
+                        <a class="nav-link mx-2" href="/artikel/">Artikel</a>
+                    </li>
+                    <li class="nav-item font-bold">
+                        <a class="nav-link mx-2" href="/umkm/">UMKM</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead-app">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 text-center">
+                    <h1 class="header-title">Berita Desa</h1>
+                    <p class="header-caption">Berita-Berita Terbaru dari Desa Bojongmekar.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+  <!-- Isi Sejarah -->
+  <section class="py-5">
+    <div class="container"> 
+        <p class="title-text">{{ content.title }}</p>
+        <p class="text-secondary pb-4">{{ content.date }}, by Admin Desa</p>
+        <img src="{{ content.photo_link }}" class="img-fluid pb-3" style="max-height: 45rem; width: 100%; object-fit: cover;"/>
+        <p>{{ content.content|linebreaks }}</p>
+    </div>
+</section>
+</body>
+{% endblock content %}

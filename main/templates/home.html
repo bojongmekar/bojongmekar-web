@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+{% load static %}
+ 
+{% block content %}
+<head>
+  <title>Bojongmekar</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg p-3 shadow fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Bojongmekar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto ">
+          <li class="nav-item font-bold">
+            <a class="nav-link mx-2 active" aria-current="page" href="/">Beranda</a>
+          </li>
+          <li class="nav-item dropdown font-bold">
+            <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Profil Desa
+            </a>
+            <ul class="dropdown-menu font-bold" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="/profil/sejarah/">Tentang Desa</a></li>
+              <li><a class="dropdown-item" href="/profil/wilayah/">Wilayah Desa</a></li>
+              <li><a class="dropdown-item" href="/profil/masyarakat/">Masyarakat Desa</a></li>
+              <li><a class="dropdown-item" href="/profil/potensi/">Potensi Desa</a></li>
+            </ul>
+          </li>
+          <li class="nav-item font-bold">
+            <a class="nav-link mx-2" href="/berita/">Berita</a>
+          </li>
+          <li class="nav-item font-bold">
+            <a class="nav-link mx-2" href="/artikel/">Artikel</a>
+          </li>
+          <li class="nav-item font-bold">
+            <a class="nav-link mx-2" href="/umkm/">UMKM</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12 text-center">
+          <h1 class="header-title">Bojongmekar</h1>
+            <p class="header-caption">Desa Bojongmekar is a charming village located in West Java, Indonesia, known for its picturesque landscapes and warm hospitality.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Berita Terbaru -->
+  <section class="pt-5">
+    <div class="container"> 
+      <p class="title-text pb-4">Berita Terbaru</p>
+      <div class="row row-cols-2 row-cols-md-3">
+        <div class="col pb-4">
+          <div class="card pb">
+            <img class="card-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col pb-4">
+          <div class="card">
+            <img class="card-img" src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col pb-4">
+          <div class="card">
+            <img class="card-img" src="https://plus.unsplash.com/premium_photo-1666863910470-c5906f963cb4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1550&q=80" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pengumuman Terbaru -->
+  <section class="pt-5">
+    <div class="container"> 
+      <p class="title-text pb-4">Pengumuman Terbaru</p>
+      <div class="row row-cols-2 row-cols-md-3">
+        <div class="col pb-4">
+          <div class="card">
+            <img class="card-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col pb-4">
+          <div class="card">
+            <img class="card-img" src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col pb-4">
+          <div class="card">
+            <img class="card-img" src="https://plus.unsplash.com/premium_photo-1666863910470-c5906f963cb4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1550&q=80" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Feedback -->
+  <section class="">
+    <div class="container py-4">
+      <p class="title-text pb-4">Feedback</p>
+      <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="name" class="form-label">Nama</label>
+          <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email">
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Pesan</label>
+          <textarea type="text" class="form-control" id="message" name="message" style="height: 10rem;"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Tambah</button>
+      </form>
+    </div>
+  </section>
+</body>
+
+{% endblock content %}

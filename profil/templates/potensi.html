@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+ 
+{% block content %}
+<head>
+  <title>Profil Potensi Desa</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg p-3 shadow fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Bojongmekar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item font-bold">
+                        <a class="nav-link mx-2" aria-current="page" href="/">Beranda</a>
+                    </li>
+                    <li class="nav-item dropdown font-bold">
+                        <a class="nav-link mx-2 dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profil Desa</a>
+                        <ul class="dropdown-menu font-bold" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="/profil/sejarah/">Tentang Desa</a></li>
+                            <li><a class="dropdown-item" href="/profil/wilayah/">Wilayah Desa</a></li>
+                            <li><a class="dropdown-item" href="/profil/masyarakat/">Masyarakat Desa</a></li>
+                            <li><a class="dropdown-item" href="/profil/potensi/">Potensi Desa</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item font-bold">
+                        <a class="nav-link mx-2" href="/berita/">Berita</a>
+                    </li>
+                    <li class="nav-item font-bold">
+                        <a class="nav-link mx-2" href="/artikel/">Artikel</a>
+                    </li>
+                    <li class="nav-item font-bold">
+                        <a class="nav-link mx-2" href="/umkm/">UMKM</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead-app">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 text-center">
+                    <h1 class="header-title">Potensi Desa</h1>
+                    <p class="header-caption">Profil Singkat mengenai Masyarakat Desa Bojongmekar.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Jumlah Penduduk Berdasarkan Kelamin -->
+    {% include 'tabel/jumlah/kelamin.html' %}
+
+    <!-- Jumlah Penduduk Berdasarkan Agama -->
+    {% include 'tabel/jumlah/agama.html' %}
+
+    <!-- Jumlah Penduduk Berdasarkan Pekerjaan -->
+    {% include 'tabel/jumlah/pekerjaan.html' %}
+
+    <!-- Jumlah Sarana Pendidikan Formal -->
+    {% include 'tabel/sosbud/pend-formal.html' %}
+    
+    <!-- Jumlah Sarana Pendidikan Non Formal -->
+    {% include 'tabel/sosbud/pend-nonformal.html' %}
+    
+    <!-- Jumlah Sarana Kesehatan -->
+    {% include 'tabel/sosbud/kesehatan.html' %}
+
+    <!-- Jumlah Sarana Olahraga -->
+    {% include 'tabel/sosbud/olahraga.html' %}
+
+    <!-- Jumlah Sarana Ibadah -->
+    {% include 'tabel/sosbud/ibadah.html' %}
+
+    <!-- Jumlah Lembaga Ekonomi -->
+    {% include 'tabel/ekonomi/ekonomi.html' %}
+
+    <!-- Jumlah Lembaga Keuangan -->
+    {% include 'tabel/ekonomi/keuangan.html' %}
+
+    <!-- Jumlah Lembaga UMKM -->
+    {% include 'tabel/ekonomi/umkm.html' %}
+
+    <!-- Rata-rata Pendapatan -->
+    {% include 'tabel/keuangan/pendapatan.html' %}
+
+    <!-- Rata-rata Belanja -->
+    {% include 'tabel/keuangan/belanja.html' %}
+
+    <!-- Rata-rata Pembiayaan -->
+    {% include 'tabel/keuangan/pembiayaan.html' %}
+
+    <!-- Pembagian Wilayah -->
+    {% include 'tabel/wilayah/wilayah.html' %}
+</body>
+{% endblock content %}

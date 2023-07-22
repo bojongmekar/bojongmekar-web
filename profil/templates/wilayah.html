@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+ 
+{% block content %}
+<head>
+  <title>Profil Wilayah Desa</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg p-3 shadow fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Bojongmekar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item font-bold">
+                        <a class="nav-link mx-2" aria-current="page" href="/">Beranda</a>
+                    </li>
+                    <li class="nav-item dropdown font-bold">
+                        <a class="nav-link mx-2 dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profil Desa</a>
+                        <ul class="dropdown-menu font-bold" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="/profil/sejarah/">Tentang Desa</a></li>
+                            <li><a class="dropdown-item" href="/profil/wilayah/">Wilayah Desa</a></li>
+                            <li><a class="dropdown-item" href="/profil/masyarakat/">Masyarakat Desa</a></li>
+                            <li><a class="dropdown-item" href="/profil/potensi/">Potensi Desa</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item font-bold">
+                        <a class="nav-link mx-2" href="/berita/">Berita</a>
+                    </li>
+                    <li class="nav-item font-bold">
+                        <a class="nav-link mx-2" href="/artikel/">Artikel</a>
+                    </li>
+                    <li class="nav-item font-bold">
+                        <a class="nav-link mx-2" href="/umkm/">UMKM</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead-app">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 text-center">
+                    <h1 class="header-title">Wilayah Desa</h1>
+                    <p class="header-caption">Profil Singkat mengenai Wilayah Desa Bojongmekar.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Peta -->
+    <section class="py-5">
+        <div class="container"> 
+            <p class="title-text pb-3">Peta Desa</p>
+            <p class="pb-2">Desa Bojongmekar terletak di Daerah Barat Kabupaten Bandung Barat, dengan luas Wilayah 378,695 Hektar yang terdiri dari 3 Dusun dengan 12  Rukun Warga (RW) dan 37 Rukun Tetangga (RT) yang merupakan salah satu Desa yang berada di wilayah Kecamatan Cipeundeuy Kabupaten Bandung Barat.</p>
+            <img src="https://i.ibb.co/PZFG9cZ/Peta-Bojongmekar.jpg" class="img-fluid">
+        </div>
+    </section>
+</body>
+{% endblock content %}

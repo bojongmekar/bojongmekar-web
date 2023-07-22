@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% load static %}
+ 
+{% block content %}
+<head>
+    <title>Tentang Desa</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg p-3 shadow fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Bojongmekar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item font-bold">
+                        <a class="nav-link mx-2" aria-current="page" href="/">Beranda</a>
+                    </li>
+                    <li class="nav-item dropdown font-bold">
+                        <a class="nav-link mx-2 dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profil Desa</a>
+                        <ul class="dropdown-menu font-bold" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="/profil/sejarah/">Tentang Desa</a></li>
+                            <li><a class="dropdown-item" href="/profil/wilayah/">Wilayah Desa</a></li>
+                            <li><a class="dropdown-item" href="/profil/masyarakat/">Masyarakat Desa</a></li>
+                            <li><a class="dropdown-item" href="/profil/potensi/">Potensi Desa</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item font-bold">
+                        <a class="nav-link mx-2" href="/berita/">Berita</a>
+                    </li>
+                    <li class="nav-item font-bold">
+                        <a class="nav-link mx-2" href="/artikel/">Artikel</a>
+                    </li>
+                    <li class="nav-item font-bold">
+                        <a class="nav-link mx-2" href="/umkm/">UMKM</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead-app">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 text-center">
+                    <h1 class="header-title">Tentang Desa</h1>
+                    <p class="header-caption">Rangkuman singkat mengenai Desa Bojongmekar.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sejarah -->
+    <section class="pt-5">
+        <div class="container"> 
+            <p class="title-text pb-3">Sejarah Desa</p>
+            <p>Berdasarkan keterangan beberapa orang sesepuh warga desa, bahwa dulunya pada zaman pendudukan Hindia Belanda, ada seorang tokoh yang lari dari Jawa Tengah karena dicari oleh pemerintah Hindia Belanda karena menentang pemerintahan Hindia Belanda.</p>
+            <br/>
+            <p>Tokoh yang melarikan diri ke daerah ini bernama Embah Dalem Bojong Lopang Putra dari Embah Dalem Tolo. Orang tersebut tidak kembali ke daerah asalnya, tetapi terus bermukim di daerah persembunyiannya. Semasa hidupnya, beliau sangat disegani dan menjadi panutan masyarakat karena kegigihannya melawan penjajah sehingga beliau mendapat julukan Kanjeng Dalem walaupun bukan keturunan Keraton. Sebutan kanjeng dalem adalah bentuk penghargaan masyarakat pada saat itu, sampai suatu saat beliau meninggal dunia dan dimakamkan di salah satu tempat yang pada saat itu diberi nama Bojong sebagai pancaran dari Nama Embah Bojong Lopang. Sejak Embah Kanjeng Dalem Bojong Lopang meninggal dunia, daerah ini kemudian diberi nama Bojong sampai sekarang.</p>
+            <br/>
+            <p>Adapun berdirinya Desa Bojongmekar adalah hasil pemekaran dari Desa Nyenang berdasarkan keputusan Pemerintah Kabupaten Daerah Tingkat II (DT-II) Bandung, mengingat kepadatan penduduk dan luas wilayah telah memenuhi syarat untuk dimekarkan. Diresmikannya Desa Bojongmekar menjadi desa yang berdiri sendiri pada tanggal 26 Agustus tahun 1979, kemudian pada tahun 1984 dimekarkan lagi menjadi dua desa dengan Desa Jatimekar. Jelasnya, nama Bojong berasal dari nama seorang tokoh kemudian nama Mekar dihubungkan dengan adanya pemekaran desa, maka tidak ragu lagi masyarakat daerah ini memberi nama desa yang dibentuknya sampai sekarang yaitu Desa Bojongmekar.</p>
+            <br/>
+            <p>Hal ini membuktikan pengakuan nama desa dengan riwayat yang dialami oleh masyarakat merupakan sejarah satu kata dengan satu perbuatan Lahir Dutaning Batin yang mengandung arti Panca Dayaning Manusa, yang berarti pula mempunyai lima kekuatan jiwa yang merupakn wujud dari: Budi, Cipta, Rasa, Karsa dan Karnyanya dalam bersama-sama mewujudkan tatanan hidup dan kehidupan berdasarkan Pancasila dan Undang-undang Dasar 1945.</p>
+        </div>
+    </section>
+
+    <!-- Visi Desa -->
+    <section class="pt-5">
+        <div class="container"> 
+            <p class="title-text pb-3">Visi Desa</p>
+            <div class=" text-center fw-bold fst-italic">
+                <p>“Terwujudnya Desa Bojongmekar yang Transparan, Aman, Sehat, Cerdas, Berbudaya dan Berakhlaq Mulia serta Mendukung Sektor Keparawisataan dan Ekonomi Kreatif”</p>
+            </div>
+            <br/>
+            <p>Ini dapat diartikan dapat sebagai desa yang menuju sejahtera beragama, pandai berdiri sendiri, sopan dan subur serta makmur gemah ripah tidak tergantung pada orang lain, dalam bahasa sundanya motekar serta kalau dipercaya tong codeka lamun percaya ulah cangcaya.</p>
+        </div>
+    </section>
+
+    <!-- Misi Desa -->
+    <section class="py-5">
+      <div class="container"> 
+          <p class="title-text pb-3">Misi Desa</p>
+          <p>Desa Bojongmekar yang ditandai dengan kondisi lingkungan kehidupan sosial yang makin dijiwai oleh keimanan dan ketaqwaan terhadap Tuhan Yang Maha Esa sesuai dengan keyakinan masyarakat yang diakui dalam sistem keagamaan nasional, kondisi ideal kehidupan agamis ditunjukan dari:</p>
+          <ol>
+              <li class="pb-1">Meningkatnya tata kelola dan kinerja Perangkat Desa.</li>
+              <li class="pb-1">Memudahkan pelayanan surat menyurat dan perizinan.</li>
+              <li class="pb-1">Meningkatkan derajat kesehatan masyarakat.</li>
+              <li class="pb-1">Menciptakan keamanan dan ketertiban Desa Bojongmekar yang kondusif.</li>
+              <li class="pb-1">Membina kemitraan dengan organisasi masyarakat pemerintahan dan instansi terkait.</li>
+              <li class="pb-1">Mengembangkan kepariwisataan dan ekonomi kreatif.</li>
+              <li class="pb-1">Melestarikan nilai luhur seni dan budaya.</li>
+              <li>Mendukung dan mewujudkan visi AKUR Bupati Bandung Barat.</li>
+          </ol>
+          <br/>
+          <p>Desa Bojongmekar yang sejahtera ditandai dengan kondisi kehidupan masyarakat Desa Bojongmekar yang memenuhi standar kelayakan dalam pemenuhan kebutuhan di bidang pendidikan, kesehatan, dan bermata pencaharian layak serta jaminan keamanan dengan senantisasa mempertimbnagkan kelestarian daya dukung lingkungan yang berkelanjutan. Kondisi ideal di bidang pendidikan ditunjukan dengan:</p>
+          <ol>
+              <li class="pb-1">Meningkatnya tingkat pendidikan formal masyarakat yang dilihat dari  kepedulian masyarakat itu sendiri dengan wajar dikdasnya, serta di Desa Bojongmekar sudah banyak lulusan sarjana yang dapat berkompetensi di bidangnya.</li>
+              <li class="pb-1">Tersedianya infrastruktur sarana prasarana pendidikan yang dibutuhkan disertai pemerataan lokasi pendidikan.</li>
+              <li class="pb-1">Meningkatnya penguasaan keterampilan, ilmu pengetahuan dan teknologi, serta mampu menjadikan masyarakat yang produktif.</li>
+              <li>Terwujudnya pendidikan yang berdaya guna dan berhasil guna untuk memenuhi kebutuhan hidup.</li>
+          </ol>
+          <br/>
+          <p>Kondisi Desa Bojongmekar di bidang mata pencaharian layak dan berkesinambungan ditunjukkan dengan:</p>
+          <ol>
+            <li class="pb-1">Meningkatnya keterkaitan antara sektor primer, sektor sekunder, dan sektor tersier dalam suatu sistem yang produktif, bernilai tambah dan berdaya saing serta keterkaitan pembangunan ekonomi antar wilayah.</li>
+            <li class="pb-1">Semakin kokohnya perekonomian daerah yang berdaya saing secara regional, nasional dan internasional, berbasis pada upaya pengembangan keunggulan kompetitif dan kooperatif dalam mendayagunakan potensi perikanan, peternakan, agribisnis, dan industri kecil dan menengah.</li>
+            <li class="pb-1">Meningkatnya akses yang lebih berkeadilan terhadap sumber daya ekonomi masyarakat Desa Bojongmekar.</li>
+            <li class="pb-1">Terjaminnya kesediaan kebutuhan pokok masyarakat Desa Bojongmekar.</li>
+            <li class="pb-1">Meningkatnya kebutuhan pendapatan dan daya beli masyarakat.</li>
+            <li class="pb-1">Meningkatnya laju pertumbuhan ekonomi, dan Produk Domestik Bruto yang berdampak terhadap penurunan kemiskinan.</li>
+            <li class="pb-1">Meningkatnya pendayagunaan dan pemanfaatan potensi ekonomi desa.</li>
+            <li class="pb-1">Meningkatkan ketersediaan infrastruktur perekonomian desa, terutama jalan dan jaringan irigasi.</li>
+            <li class="pb-1">Terwujudnya pembangunan pemeliharaan infrastruktur desa.</li>
+            <li>Meningkatnya penyediaan lapangan pekerjaan dan pendayagunaan tenaga kerja yang berkualitas dan berdaya saing/produktif.</li>
+        </ol>
+        <br/>
+        <p>Kondisi ideal Desa Bojongmekar yang amanah ditunjukan dengan kondisi desa dengan selalu menjalankan segala program yang sudah menjadi kewajiban dari desa itu sendiri dengan memegang teguh instruksi amanah yang diembannya baik dari masyarakat maupun dari pemerintah diatasnya, dengan upaya yang dilakukan dengan memegang teguh setiap amanah dan memaksimalkan semua potensi yang ada di Desa Bojongmekar.</p>
+        <br/>
+        <p>Desa Bojongmekar Terampil adalah ditunjukan dengan memberdayakan  Sumber Daya manusia (SDM) yang ada di Desa Bojongmekar, dan pandai memanfaatkan setiap peluang yang ada guna mewujudkan masyarakat yang adil dan sejahtera.</p>
+        <ol>
+            <li class="pb-1">Menciptakan kondisi lingkungan yang kondusif dan agamis, ditunjang oleh tersedianya sarana peribadatan dan sumberdaya manusia yang kompeten.</li>
+            <li class="pb-1">Meningkatnya akses yang lebih berkeadilan terhadap sumber daya ekonomi masyarakat Desa Bojongmekar.</li>
+            <li class="pb-1">Meningkatkan dan memberdayakan peranan perempuan dan pemuda, dengan tetap memelihara adat istiadat dan budaya lokal.</li>
+            <li class="pb-1">Membangun sarana dan prasarana yang berbasis pada ekonomi, perikanan, pertanian yang produktif, infrastruktur pedesaan dalam upaya peningkatan Indeks Daya Beli Masyarakat, serta peningkatan Sumber Daya Masyarakat desa yang berkualitas melalui “Program Desa Berpendidikan“ yang berwawasan ilmu pengetahuan dan teknologi serta berwawasan global.</li>
+        </ol>
+      </div>
+  </section>
+</body>
+{% endblock content %}
