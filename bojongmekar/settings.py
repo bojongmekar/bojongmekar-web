@@ -25,8 +25,9 @@ SECRET_KEY = 'django-insecure-l)=-xiww#t%=8sr^eeprd-s5h7liqlq*xfw%*teshb77dr-$yl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS=['*']
+ALLOWED_HOSTS = ['https://bojongmekar-web.domcloud.io/', 'https://bojongtesting.adaptable.app', '.localhost', '127.0.0.1']
+
+CSRF_TRUSTED_ORIGINS=['https://bojongmekar-web.domcloud.io/', 'https://bojongtesting.adaptable.app']
 
 # Application definition
 
