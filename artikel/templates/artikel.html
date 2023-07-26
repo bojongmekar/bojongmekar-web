@@ -33,14 +33,14 @@
                             <li><a class="dropdown-item" href="/profil/sejarah/">Tentang Desa</a></li>
                             <li><a class="dropdown-item" href="/profil/wilayah/">Wilayah Desa</a></li>
                             <li><a class="dropdown-item" href="/profil/masyarakat/">Masyarakat Desa</a></li>
-                            <li><a class="dropdown-item" href="/profil/potensi/">Potensi Desa</a></li>
+                            <li><a class="dropdown-item" href="/profil/potensi/">Geografi dan Demografi Desa</a></li>
                         </ul>
                     </li>
                     <li class="nav-item font-bold">
-                        <a class="nav-link mx-2 active" href="/berita/">Berita</a>
+                        <a class="nav-link mx-2" href="/berita/">Berita</a>
                     </li>
                     <li class="nav-item font-bold">
-                        <a class="nav-link mx-2" href="/artikel/">Artikel</a>
+                        <a class="nav-link mx-2 active" href="/artikel/">Artikel</a>
                     </li>
                     <li class="nav-item font-bold">
                         <a class="nav-link mx-2" href="/umkm/">UMKM</a>
@@ -55,8 +55,8 @@
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12 text-center">
-                    <h1 class="header-title">Berita Desa</h1>
-                    <p class="header-caption">Berita-Berita Terbaru dari Desa Bojongmekar.</p>
+                    <h1 class="header-title">Artikel Desa</h1>
+                    <p class="header-caption">Artikel-Artikel Terbaru dari Desa Bojongmekar.</p>
                 </div>
             </div>
         </div>
@@ -65,21 +65,22 @@
   <!-- Artikel -->
     <section class="py-5">
         <div class="container"> 
-            <p class="title-text pb-3">Daftar Berita</p>
+            <p class="title-text pb-3">Daftar Artikel</p>
             <div class="row">
-                {% if news_list %}
-                    {% for news in news_list reversed %}
+                {% if article_list %}
+                    {% for article in article_list reversed %}
                         <div class="col-sm-6 mb-3 mb-sm-0">
                             <div class="card mb-3" style="max-width: 640px;">
                                 <div class="row g-0">
                                     <div class="col-md-4">
-                                        <img src="{{ news.photo_link }}" class="card-img rounded-start" alt="...">
+                                        <img src="{{ article.photo_link }}" class="card-img rounded-start" alt="...">
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body">
-                                            <h5 class="card-title">{{ news.title }}</h5>
-                                            <p class="card-text">{{ news.content }}</p>
-                                            <p class="card-text"><small class="text-body-secondary">{{ news.date }}</small></p>
+                                            <h5 class="card-title">{{ article.title }}</h5>
+                                            <p class="card-text">{{ article.content }}</p>
+                                            <p class="card-text"><small class="text-body-secondary">{{ article.date }}</small></p>
+                                            <a href="konten/{{ article.id }}/" class="stretched-link"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -88,7 +89,7 @@
                     {% endfor %}
                 {% else %}
                     <div class="text-center">
-                        <p class="fs-5 text-secondary">Belum ada berita.</p>
+                        <p class="fs-5 text-secondary">Belum ada artikel.</p>
                     </div>
                 {% endif %}
             </div>

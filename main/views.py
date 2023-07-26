@@ -5,6 +5,8 @@ from main.forms import FeedbackForm
 from main.models import Feedback
 from django.core import serializers
 
+from artikel.models import Article
+
 # Create your views here.
 def index(request):
     if request.method == 'POST':
@@ -14,7 +16,9 @@ def index(request):
             form.save()
             return HttpResponseRedirect(reverse('main:index'))
     
+    articles = Article.objects.all()
     context = {
+        'article_list': articles,
         'form': FeedbackForm()
     }
     return render(request, "home.html", context)

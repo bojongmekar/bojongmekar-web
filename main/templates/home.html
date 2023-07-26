@@ -92,38 +92,32 @@
     </div>
   </section>
 
-  <!-- Pengumuman Terbaru -->
+  <!-- Artikel Terbaru -->
   <section class="pt-5">
     <div class="container"> 
-      <p class="title-text pb-4">Pengumuman Terbaru</p>
-      <div class="row row-cols-2 row-cols-md-3">
-        <div class="col pb-4">
-          <div class="card">
-            <img class="card-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
+      <p class="title-text pb-4">Artikel Terbaru</p>
+        {% if article_list %}
+          <div class="row row-cols-2 row-cols-md-3">
+            {% for article in article_list reversed %}
+              {% if forloop.counter != 4 %}
+                <div class="col pb-4">
+                  <div class="card">
+                    <img class="card-img" src="{{ article.photo_link }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ article.title }}</h5>
+                      <p class="card-text">{{ article.content }}</p>
+                      <a href="artikel/konten/{{ article.id }}/" class="stretched-link"></a>
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
           </div>
-        </div>
-        <div class="col pb-4">
-          <div class="card">
-            <img class="card-img" src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
+        {% else %}
+          <div class="text-center">
+              <p class="fs-5 text-secondary">Belum ada artikel.</p>
           </div>
-        </div>
-        <div class="col pb-4">
-          <div class="card">
-            <img class="card-img" src="https://plus.unsplash.com/premium_photo-1666863910470-c5906f963cb4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1550&q=80" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-            </div>
-          </div>
-        </div>
+        {% endif %}
       </div>
     </div>
   </section>

@@ -3,8 +3,16 @@
  
 {% block content %}
 <head>
-  <title>Profil Wilayah Desa</title>
+    <title>Berita</title>
+    <style>
+        img {
+            height: 10px;
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg p-3 shadow fixed-top">
@@ -19,7 +27,7 @@
                         <a class="nav-link mx-2" aria-current="page" href="/">Beranda</a>
                     </li>
                     <li class="nav-item dropdown font-bold">
-                        <a class="nav-link mx-2 dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profil Desa</a>
+                        <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profil Desa</a>
                         <ul class="dropdown-menu font-bold" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="/profil/sejarah/">Tentang Desa</a></li>
                             <li><a class="dropdown-item" href="/profil/wilayah/">Wilayah Desa</a></li>
@@ -28,7 +36,7 @@
                         </ul>
                     </li>
                     <li class="nav-item font-bold">
-                        <a class="nav-link mx-2" href="/berita/">Berita</a>
+                        <a class="nav-link mx-2 active" href="/berita/">Berita</a>
                     </li>
                     <li class="nav-item font-bold">
                         <a class="nav-link mx-2" href="/artikel/">Artikel</a>
@@ -46,20 +54,21 @@
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12 text-center">
-                    <h1 class="header-title">Wilayah Desa</h1>
-                    <p class="header-caption">Profil Singkat mengenai Wilayah Desa Bojongmekar.</p>
+                    <h1 class="header-title">Berita Desa</h1>
+                    <p class="header-caption">Berita-Berita Terbaru dari Desa Bojongmekar.</p>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Peta -->
-    <section class="py-5">
-        <div class="container"> 
-            <p class="title-text pb-3">Peta Desa</p>
-            <p class="pb-2">Desa Bojongmekar terletak di Daerah Barat Kabupaten Bandung Barat, dengan luas Wilayah 378,695 Hektar yang terdiri dari 3 Dusun dengan 12  Rukun Warga (RW) dan 37 Rukun Tetangga (RT) yang merupakan salah satu Desa yang berada di wilayah Kecamatan Cipeundeuy Kabupaten Bandung Barat.</p>
-            <img src="https://i.ibb.co/PZFG9cZ/Peta-Bojongmekar.jpg" class="img-fluid">
-        </div>
-    </section>
+  <!-- Isi Sejarah -->
+  <section class="py-5">
+    <div class="container"> 
+        <p class="title-text">{{ content.title }}</p>
+        <p class="text-secondary pb-4">{{ content.date }}, by Admin Desa</p>
+        <img src="{{ content.photo_link }}" class="img-fluid pb-3" style="max-height: 45rem; width: 100%; object-fit: cover;"/>
+        <p>{{ content.content|linebreaks }}</p>
+    </div>
+</section>
 </body>
 {% endblock content %}

@@ -25,7 +25,7 @@
                             <li><a class="dropdown-item" href="/profil/sejarah/">Tentang Desa</a></li>
                             <li><a class="dropdown-item" href="/profil/wilayah/">Wilayah Desa</a></li>
                             <li><a class="dropdown-item" href="/profil/masyarakat/">Masyarakat Desa</a></li>
-                            <li><a class="dropdown-item" href="/profil/potensi/">Potensi Desa</a></li>
+                            <li><a class="dropdown-item" href="/profil/potensi/">Geografi dan Demografi Desa</a></li>
                         </ul>
                     </li>
                     <li class="nav-item font-bold">
@@ -57,15 +57,15 @@
     <!-- Struktur -->
     <section class="pt-5">
         <div class="container"> 
-            <p class="title-text pb-3">Struktur Organisasi</p>
+            <p class="title-text">Struktur Organisasi</p>
             <div class="text-center">
-                <img src="https://banhub.kaltimprov.go.id/wp-content/uploads/2022/07/struktur-organisasi-edited.png" class="img-fluid" style="height: 20rem;">
+                <img src="https://i.ibb.co/GRbFKdm/p1h5jiifs2pmfgi1ufm6q06dp4-0.png" class="img-fluid">
             </div>
         </div>
     </section>
 
     <!-- Profil -->
-    <section class="py-5">
+    <!-- <section class="pt-5">
         <div class="container"> 
             <p class="title-text pb-3">Profil Masyarakat</p>
             <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
@@ -116,9 +116,21 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <!-- Bagan -->
+    <!-- PKK -->
+    {% include 'tabel/masyarakat/pkk.html' %}
 
+    <!-- RT RW -->
+    {% include 'tabel/masyarakat/rtrw.html' %}
+
+    <!-- Posyandu -->
+    {% include 'tabel/masyarakat/posyandu.html' %}
+
+    <!-- Pokja -->
+    {% include 'tabel/masyarakat/pokja.html' %}
+
+    <!-- LPMD -->
+    {% include 'tabel/masyarakat/lpmd.html' %}
 </body>
 {% endblock content %}

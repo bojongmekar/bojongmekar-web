@@ -19,7 +19,7 @@ def konten(request, pk):
     context = {
         'content': content
     }
-    return render(request, 'konten.html', context)
+    return render(request, 'konten-berita.html', context)
 
 def show_json(request):
     data = News.objects.all()
