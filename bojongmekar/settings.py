@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '{DJANGO_SECRET_KEY}'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['bojongmekar-web.domcloud.io', 'bojongtesting-app-app-04a7d7f651edd0fc4-duefjrmtca-uc.a.run.app', '.localhost', '127.0.0.1']
 
