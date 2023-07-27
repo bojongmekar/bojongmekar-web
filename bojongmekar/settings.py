@@ -29,6 +29,7 @@ ALLOWED_HOSTS = ['bojongmekar-web.domcloud.io', 'bojongtesting-app-app-04a7d7f65
 
 CSRF_TRUSTED_ORIGINS=['https://bojongmekar-web.domcloud.io/', 'https://bojongtesting.adaptable.app']
 
+
 # Application definition
 
 INSTALLED_APPS = [
