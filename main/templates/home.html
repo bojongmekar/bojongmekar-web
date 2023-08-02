@@ -27,7 +27,7 @@
               <li><a class="dropdown-item" href="/profil/sejarah/">Tentang Desa</a></li>
               <li><a class="dropdown-item" href="/profil/wilayah/">Wilayah Desa</a></li>
               <li><a class="dropdown-item" href="/profil/masyarakat/">Masyarakat Desa</a></li>
-              <li><a class="dropdown-item" href="/profil/potensi/">Potensi Desa</a></li>
+              <li><a class="dropdown-item" href="/profil/potensi/">Geografi dan Demografi Desa</a></li>
             </ul>
           </li>
           <li class="nav-item font-bold">
@@ -49,8 +49,8 @@
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-12 text-center">
-          <h1 class="header-title">Bojongmekar</h1>
-            <p class="header-caption">Desa Bojongmekar is a charming village located in West Java, Indonesia, known for its picturesque landscapes and warm hospitality.</p>
+          <h1 class="header-title pb-2">Bojongmekar</h1>
+            <p class="header-caption">Desa Bojongmekar adalah desa yang berada di Kecamatan Cipeundeuy Kabupaten Bandung Barat yang termasuk desa hasil pemekaran dan berdiri sendiri pada tanggal 26 Agustus 1979. Mewujudkan Desa Bojongmekar yang transparan, aman, sehat, cerdas, berbudaya, berakhlaq, serta mendukung sektor pariwisata dan ekonomi kreatif merupakan visi utama yang akan Desa Bojongmekar raih untuk kesejahteraan desa.</p>
         </div>
       </div>
     </div>
@@ -63,7 +63,7 @@
         {% if news_list %}
           <div class="row row-cols-2 row-cols-md-3">
             {% for news in news_list reversed %}
-              {% if forloop.counter != 4 %}
+              {% if forloop.counter < 4 %}
                 <div class="col pb-4">
                   <div class="card">
                     <img class="card-img" src="{{ news.photo_link }}" class="card-img-top" alt="...">
@@ -93,7 +93,7 @@
         {% if article_list %}
           <div class="row row-cols-2 row-cols-md-3">
             {% for article in article_list reversed %}
-              {% if forloop.counter != 4 %}
+              {% if forloop.counter < 4 %}
                 <div class="col pb-4">
                   <div class="card">
                     <img class="card-img" src="{{ article.photo_link }}" class="card-img-top" alt="...">
